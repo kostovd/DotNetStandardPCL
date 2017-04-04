@@ -3,6 +3,7 @@ mono: none
 dotnet: 1.0.1
 os: linux
 dist: trusty
+sudo: required
 
 install:
     - dotnet restore
