@@ -14,9 +14,9 @@ namespace Lib
     {
         private readonly HttpClient _httpClient;
 
-        public HttpClientWrapper()
+        public HttpClientWrapper(HttpMessageHandler httpMessageHandler = null)
         {
-            _httpClient = new HttpClient();
+            _httpClient = (httpMessageHandler != null ? new HttpClient(httpMessageHandler) : new HttpClient());
 
             _httpClient.BaseAddress = new Uri("https://jsonplaceholder.typicode.com");
             _httpClient.DefaultRequestHeaders.Accept.Clear();

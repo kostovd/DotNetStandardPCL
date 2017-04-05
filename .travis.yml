@@ -5,4 +5,5 @@ dotnet: 1.0.1
 
 script:
   - dotnet restore
-  - dotnet build
+  - dotnet build -c Release
+  - dotnet test ./Tests/Tests.csproj -c Release

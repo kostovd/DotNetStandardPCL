@@ -16,16 +16,16 @@ namespace App
             HttpClientWrapper clienttWrapper = new HttpClientWrapper();
 
             Console.WriteLine("GetUserAsync");
-            string posts = await clienttWrapper.GetUserAsync();
+            string user = await clienttWrapper.GetUserAsync();
             Console.WriteLine("User string:");
-            Console.WriteLine(posts);
+            Console.WriteLine(user);
 
             Console.WriteLine();
 
             Console.WriteLine("GetUserAsyncJson");
-            dynamic postsJson = await clienttWrapper.GetUserAsyncJson();
+            dynamic userJson = await clienttWrapper.GetUserAsyncJson();
             Console.WriteLine("User json:");
-            Console.WriteLine(postsJson.ToString());
+            Console.WriteLine(userJson.ToString());
 
             Console.ReadLine();
         }
