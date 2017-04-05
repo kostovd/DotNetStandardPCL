@@ -74,7 +74,7 @@ namespace Tests
             HttpClientWrapper client = new HttpClientWrapper(mockHttp);
 
             var userJson = client.GetUserAsync().Result;
-            Assert.AreEqual(jObject.ToString(), userJson);
+            Assert.AreEqual(jsonResponse, userJson);
         }
     }
 }
