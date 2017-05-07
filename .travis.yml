@@ -7,5 +7,4 @@ script:
   - dotnet restore
   - dotnet build ./Lib -f netstandard1.1 -c Realease
   - dotnet build ./App -c Realease
-  - dotnet build ./Test -c Realease
   - dotnet test ./Tests/Tests.csproj -c Release
