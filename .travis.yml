@@ -5,5 +5,7 @@ dotnet: 1.0.1
 
 script:
   - dotnet restore
-  - dotnet build -c Release
+  - dotnet build ./Lib -f netstandard1.1 -c Realease
+  - dotnet build ./App -c Realease
+  - dotnet build ./Test -c Realease
   - dotnet test ./Tests/Tests.csproj -c Release
